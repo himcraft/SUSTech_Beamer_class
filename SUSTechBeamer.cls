@@ -13,20 +13,20 @@
 \RequirePackage{geometry}
 \geometry{paperwidth=16cm,paperheight=9cm}
 
-% \useoutertheme{shadow}
+% \useoutertheme{default}
 % \usepackage{tikz}
 % \usetikzlibrary{shadings}
-% \colorlet{titleleft}{sustech_orange}
-% \colorlet{titleright}{sustech_orange!45!sustech_white}
+% \colorlet{titleleft}{sustech_white}
+% \colorlet{titleright}{sustech_orange}
 % \makeatletter
 % \pgfdeclarehorizontalshading[titleleft,titleright]{beamer@frametitleshade}{\paperheight}{%
-%   color(0pt)=(titleleft);
+%   color(0.5\paperwidth)=(titleleft);
 %   color(\paperwidth)=(titleright)}
 % \makeatother
 
-\setbeamercolor{section in head/foot}{bg=sustech_darkgreen, fg=sustech_white}
+\setbeamercolor{section in head/foot}{bg=sustech_orange, fg=sustech_white}
 \setbeamercolor{subsection in head/foot}{bg=sustech_darkgreen, fg=sustech_white}
-\setbeamercolor{frametitle}{bg=sustech_orange, fg=sustech_black}
+\setbeamercolor{frametitle}{bg=sustech_white, fg=sustech_black}
 \setbeamercolor{title}{bg=sustech_orange, fg=sustech_white}
 \setbeamercolor{alerted text}{fg=sustech_orange}
 \setbeamercolor{block title}{fg=sustech_blue}
@@ -36,11 +36,16 @@
 \setbeamertemplate{propositions}[numbered]
 \setbeamertemplate{navigation symbols}[only frame symbol]
 
-
+\setbeamertemplate{headline}[infolines theme]
+\setbeamertemplate{footline}[page number]
+\setbeamercolor{footline}{bg=sustech_white,fg=sustech_darkgreen}
+% \setbeamertemplate{page number in foot}[totalpagenumber]
 
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 
 \setbeamertemplate{title page}[default][colsep=-4bp,rounded=true, shadow=true]
+
+\logo{\includegraphics[height=0.5cm]{beamer_resource/figs/LOGO.pdf}}
 
 \newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}
 
