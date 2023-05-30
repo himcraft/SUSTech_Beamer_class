@@ -1,18 +1,28 @@
 \documentclass{SUSTechBeamer}
 \usetheme{Malmoe}
-\title{This is a title}
-\subtitle{This is a subtitle}
-\author{John Myself}
-\institute[SUSTech]{Southern University of Science and Technology}
-\date{\today}
+\title{Journey to \LaTeX}
+\subtitle{An introduction to the typesetting system}
+\author[Solo \textit{et al.}]{Han~Solo\inst{1}
+    \and Luke~Skywalker\inst{2}
+    \and Darth~Vadar\inst{3}
+}
+\institute[SUSTech]{\inst{1}Southern University of Science and Technology
+    \and \inst{2} Jedi Academy
+    \and \inst{3} Galatic Empire
+}
+\date[2000 Winter]{January 1st, 2000}
 \begin{document}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
 \begin{frame}
     \titlepage
 \end{frame}
 
+\setbeamertemplate{footline}[\defaultfoot]
 \begin{frame}
     \tableofcontents
 \end{frame}
+\setbeamertemplate{headline}[\defaulthead]
 
 \section{Introduction}
 \subsection{Introduction}
