@@ -1,7 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SUSTechBeamer}[2023/05/28 Beamer template with SUSTech symbols]
 \LoadClass[xcolor=dvipsnames,compress]{beamer}
-\usetheme{Malmoe}
+% \usetheme{Malmoe}
+\usetheme{AnnArbor}
 % \usetheme{Singapore}
 \usefonttheme[onlysmall]{structurebold}
 \RequirePackage{xcolor}
@@ -12,6 +13,8 @@
 \definecolor{sustech_white}{RGB}{255,255,255}
 \RequirePackage{geometry}
 \geometry{paperwidth=16cm,paperheight=9cm}
+\def\defaulthead{split theme}
+\def\defaultfoot{infolines theme}
 
 % \useoutertheme{default}
 % \usepackage{tikz}
@@ -26,8 +29,10 @@
 
 \setbeamercolor{section in head/foot}{bg=sustech_orange, fg=sustech_white}
 \setbeamercolor{subsection in head/foot}{bg=sustech_darkgreen, fg=sustech_white}
+\setbeamercolor{date in head/foot}{fg=sustech_white,bg=sustech_darkgreen}
+\setbeamercolor{author in head/foot}{fg=sustech_white,bg=sustech_darkgreen}
 \setbeamercolor{frametitle}{bg=sustech_white, fg=sustech_black}
-\setbeamercolor{title}{bg=sustech_orange, fg=sustech_white}
+\setbeamercolor{title}{fg=sustech_darkgreen, bg=sustech_white}
 \setbeamercolor{alerted text}{fg=sustech_orange}
 \setbeamercolor{block title}{fg=sustech_blue}
 \setbeamercolor{block body}{fg=sustech_black}
@@ -36,16 +41,30 @@
 \setbeamertemplate{propositions}[numbered]
 \setbeamertemplate{navigation symbols}[only frame symbol]
 
-\setbeamertemplate{headline}[infolines theme]
-\setbeamertemplate{footline}[page number]
+\setbeamertemplate{headline}[\defaulthead]
+\setbeamertemplate{footline}[\defaultfoot]
 \setbeamercolor{footline}{bg=sustech_white,fg=sustech_darkgreen}
+
 % \setbeamertemplate{page number in foot}[totalpagenumber]
 
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 
-\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true, shadow=true]
+% \setbeamertemplate{title page}[default][colsep=-4bp,rounded=true, shadow=true]
+\setbeamertemplate{title page}[default]
 
-\logo{\includegraphics[height=0.5cm]{beamer_resource/figs/LOGO.pdf}}
+\setbeamerfont{title}{size=\Huge}
+
+% Logo only on title page
+\usepackage{tikz}
+\titlegraphic { 
+\begin{tikzpicture}[overlay,remember picture]
+\node[] at (0,0){
+    \includegraphics[width=4cm]{beamer_resource/figs/LOGO_en_lr.pdf}
+};
+\end{tikzpicture}
+}
+
+% \logo{\includegraphics[height=0.5cm]{beamer_resource/figs/LOGO.pdf}}
 
 \newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}
 
