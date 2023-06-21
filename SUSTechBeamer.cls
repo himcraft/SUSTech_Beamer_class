@@ -1,5 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SUSTechBeamer}[2023/05/28 Beamer template with SUSTech symbols]
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
+\ProcessOptions\relax
 \LoadClass[xcolor=dvipsnames,compress]{beamer}
 % \usetheme{Malmoe}
 \usetheme{AnnArbor}
@@ -12,7 +14,6 @@
 \definecolor{sustech_black}{RGB}{0,0,0}
 \definecolor{sustech_white}{RGB}{255,255,255}
 \RequirePackage{geometry}
-\geometry{paperwidth=16cm,paperheight=9cm}
 \def\defaulthead{split theme}
 \def\defaultfoot{infolines theme}
 
