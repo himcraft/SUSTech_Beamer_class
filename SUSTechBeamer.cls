@@ -40,7 +40,16 @@
 
 \setbeamertemplate{theorems}[numbered]
 \setbeamertemplate{propositions}[numbered]
+%&&& setting navigation symbols: [only frame symbol]/[default]
 \setbeamertemplate{navigation symbols}[only frame symbol]
+%&&& close navigation symbols
+% \setbeamertemplate{navigation symbols}{}
+
+%&&& change symbols before itemize/enumerate items
+%&&& [default]/[circle]/[square]/[ball]
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
 
 \setbeamertemplate{headline}[\defaulthead]
 \setbeamertemplate{footline}[\defaultfoot]
@@ -48,6 +57,9 @@
 
 % \setbeamertemplate{page number in foot}[totalpagenumber]
 
+%&&& set symbol before (sub)sections in contents
+%&&& [circle]/[square]/[sections numbered]/[default]
+\setbeamertemplate{sections/subsections in toc}[circle]
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 
 % \setbeamertemplate{title page}[default][colsep=-4bp,rounded=true, shadow=true]
